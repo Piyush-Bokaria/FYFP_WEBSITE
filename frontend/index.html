@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From the Youth For the People</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="./assets/FYFP_logo.png" alt="FYFP Logo" class="logo-image" />
+          <div class="logo-text">
+            <h2>FYFP</h2>
+            <span class="logo-subtitle">From the Youth For the People</span>
+          </div>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#events" class="nav-link">Events & Calendar</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#impact" class="nav-link">Impact</a></li>
+          <li><a href="#donate" class="nav-link donate-nav">lorem</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="threedots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="logos">
+            <div class="hero-logo">
+                <img src="assets/FYFP_logo.png" alt="FYFP Logo" class="hero-logo-image" />
+            </div>
+            <div class="hero-logo college-logo">
+                <img src="assets/MANSAS copy.png" alt="College Logo" class="college-logo-image" />
+            </div>
+        </div>
+        <h1>From the Youth For the People</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed</p>
+        <button class="cta-button">Join Our Movement</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Our Society</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+          <div class="about-values">
+            <h3>Our Values</h3>
+            <ul>
+              <li>Lorem Ipsum Dolor</li>
+              <li>Consectetur Adipiscing</li>
+              <li>Sed Do Eiusmod</li>
+              <li>Tempor Incididunt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+      <div class="container">
+        <h2>Events</h2>
+        <div class="events-tabs">
+          <button class="tab-button active" onclick="showTab('past', this)">
+            Past Events
+          </button>
+          <button class="tab-button" onclick="showTab('upcoming', this)">
+            Upcoming Events
+          </button>
+        </div>
+
+        <div id="past-events" class="events-content active">
+          <div class="event-card">
+            <h3>Lorem Ipsum Event</h3>
+            <p class="event-date">March 15, 2024</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>Consectetur Adipiscing</h3>
+            <p class="event-date">February 20, 2024</p>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>Sed Do Eiusmod</h3>
+            <p class="event-date">January 10, 2024</p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
+
+        <div id="upcoming-events" class="events-content">
+          <div class="event-card">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p class="event-date">August 15, 2024</p>
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>Labore Et Dolore</h3>
+            <p class="event-date">September 5, 2024</p>
+            <p>
+              Magna aliqua ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi.
+            </p>
+          </div>
+          <div class="event-card">
+            <h3>Magna Aliqua</h3>
+            <p class="event-date">October 20, 2024</p>
+            <p>
+              Ut aliquip ex ea commodo consequat duis aute irure dolor in
+              reprehenderit in voluptate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Calendar Section -->
+    <section id="calendar" class="calendar">
+      <div class="container">
+        <h2>Academic Year 2024-25 Calendar</h2>
+        <p class="calendar-subtitle">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+          tempor
+        </p>
+
+        <div class="calendar-timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">AUG</div>
+              <div class="day">15</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Lorem Ipsum Dolor</h4>
+              <p>Consectetur adipiscing elit sed do eiusmod</p>
+              <span class="event-type community">Community Service</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">SEP</div>
+              <div class="day">05</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Tempor Incididunt</h4>
+              <p>Ut labore et dolore magna aliqua</p>
+              <span class="event-type awareness">Awareness</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">SEP</div>
+              <div class="day">22</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Enim Ad Minim</h4>
+              <p>Veniam quis nostrud exercitation ullamco</p>
+              <span class="event-type social">Social</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">OCT</div>
+              <div class="day">10</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Laboris Nisi Ut</h4>
+              <p>Aliquip ex ea commodo consequat duis</p>
+              <span class="event-type workshop">Workshop</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">OCT</div>
+              <div class="day">20</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Aute Irure Dolor</h4>
+              <p>In reprehenderit in voluptate velit esse</p>
+              <span class="event-type fundraising">Fundraising</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">NOV</div>
+              <div class="day">15</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Cillum Dolore Eu</h4>
+              <p>Fugiat nulla pariatur excepteur sint</p>
+              <span class="event-type community">Community Service</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">DEC</div>
+              <div class="day">08</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Occaecat Cupidatat</h4>
+              <p>Non proident sunt in culpa qui</p>
+              <span class="event-type community">Community Service</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">JAN</div>
+              <div class="day">26</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Officia Deserunt</h4>
+              <p>Mollit anim id est laborum sed</p>
+              <span class="event-type social">Social</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">FEB</div>
+              <div class="day">14</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Ut Perspiciatis</h4>
+              <p>Unde omnis iste natus error sit</p>
+              <span class="event-type workshop">Workshop</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">MAR</div>
+              <div class="day">20</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Voluptatem Accusantium</h4>
+              <p>Doloremque laudantium totam rem aperiam</p>
+              <span class="event-type community">Community Service</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <div class="month">APR</div>
+              <div class="day">15</div>
+            </div>
+            <div class="timeline-content">
+              <h4>Eaque Ipsa Quae</h4>
+              <p>Ab illo inventore veritatis et quasi</p>
+              <span class="event-type social">Social</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Event Gallery</h2>
+        <p class="gallery-subtitle">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+        </p>
+
+        <div class="gallery-filters">
+          <button
+            class="filter-btn active"
+            onclick="filterGallery('all', this)"
+          >
+            All Events
+          </button>
+          <button class="filter-btn" onclick="filterGallery('community', this)">
+            Community Service
+          </button>
+          <button class="filter-btn" onclick="filterGallery('workshops', this)">
+            Workshops
+          </button>
+          <button
+            class="filter-btn"
+            onclick="filterGallery('fundraising', this)"
+          >
+            Fundraising
+          </button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-placeholder">
+              <div class="placeholder-icon">📸</div>
+              <p>Lorem Ipsum Event</p>
+            </div>
+            <div class="gallery-overlay">
+              <h4>Lorem Ipsum Event</h4>
+              <p>March 2024 • Lorem ipsum</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="workshops">
+            <div class="gallery-placeholder">
+              <div class="placeholder-icon">📸</div>
+              <p>Consectetur Adipiscing</p>
+            </div>
+            <div class="gallery-overlay">
+              <h4>Consectetur Adipiscing</h4>
+              <p>February 2024 • Dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-placeholder">
+              <div class="placeholder-icon">📸</div>
+              <p>Sed Do Eiusmod</p>
+            </div>
+            <div class="gallery-overlay">
+              <h4>Sed Do Eiusmod</h4>
+              <p>January 2024 • Tempor incididunt</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="workshops">
+            <div class="gallery-placeholder">
+              <div class="placeholder-icon">📸</div>
+              <p>Ut Labore Dolore</p>
+            </div>
+            <div class="gallery-overlay">
+              <h4>Ut Labore Dolore</h4>
+              <p>December 2023 • Magna aliqua</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="fundraising">
+            <div class="gallery-placeholder">
+              <div class="placeholder-icon">📸</div>
+              <p>Enim Ad Minim</p>
+            </div>
+            <div class="gallery-overlay">
+              <h4>Enim Ad Minim</h4>
+              <p>November 2023 • Veniam quis</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="community">
+            <div class="gallery-placeholder">
+              <div class="placeholder-icon">📸</div>
+              <p>Nostrud Exercitation</p>
+            </div>
+            <div class="gallery-overlay">
+              <h4>Nostrud Exercitation</h4>
+              <p>October 2023 • Ullamco laboris</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-photo">
+              <div class="placeholder-photo">👤</div>
+            </div>
+            <h3>Lorem Ipsum</h3>
+            <p class="member-role">President</p>
+            <p class="member-bio">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+              eiusmod tempor.
+            </p>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+              <div class="placeholder-photo">👤</div>
+            </div>
+            <h3>Consectetur Adipiscing</h3>
+            <p class="member-role">Vice President</p>
+            <p class="member-bio">
+              Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
+              nisi.
+            </p>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+              <div class="placeholder-photo">👤</div>
+            </div>
+            <h3>Sed Do Eiusmod</h3>
+            <p class="member-role">Events Coordinator</p>
+            <p class="member-bio">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum.
+            </p>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+              <div class="placeholder-photo">👤</div>
+            </div>
+            <h3>Tempor Incididunt</h3>
+            <p class="member-role">Outreach Director</p>
+            <p class="member-bio">
+              Excepteur sint occaecat cupidatat non proident sunt in culpa qui
+              officia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+      <div class="container">
+        <h2>Our Impact</h2>
+        <div class="impact-stats">
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Students Engaged</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">25</div>
+            <div class="stat-label">Community Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Volunteer Hours</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Partner Organizations</div>
+          </div>
+        </div>
+        <div class="impact-stories">
+          <h3>Success Stories</h3>
+          <div class="story-grid">
+            <div class="story-card">
+              <h4>Lorem Ipsum Dolor</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="story-card">
+              <h4>Consectetur Adipiscing</h4>
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Lorem ipsum dolor sit amet consectetur?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Sed do eiusmod tempor incididunt?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Ut enim ad minim veniam?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Excepteur sint occaecat cupidatat?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum. Sed ut perspiciatis unde omnis iste natus error sit
+                voluptatem accusantium.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <h3>Doloremque laudantium totam rem?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <!-- <section id="donate" class="donate">
+      <div class="container">
+        <h2>Support Our Mission</h2>
+        <p class="donate-subtitle">Your contribution helps us create positive change in our community</p>
+        
+        <div class="donation-content">
+          <div class="donation-info">
+            <h3>Why Donate?</h3>
+            <div class="donation-reasons">
+              <div class="reason-item">
+                <div class="reason-icon">🎓</div>
+                <div class="reason-text">
+                  <h4>Educational Programs</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <div class="reason-icon">🤝</div>
+                <div class="reason-text">
+                  <h4>Community Outreach</h4>
+                  <p>Sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+              </div>
+              <div class="reason-item">
+                <div class="reason-icon">🌱</div>
+                <div class="reason-text">
+                  <h4>Sustainable Projects</h4>
+                  <p>Ut enim ad minim veniam quis nostrud exercitation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="donation-form-container">
+            <div class="donation-amounts">
+              <h3>Choose Amount</h3>
+              <div class="amount-buttons">
+                <button class="amount-btn" data-amount="10">Rs.10</button>
+                <button class="amount-btn" data-amount="25">Rs.25</button>
+                <button class="amount-btn active" data-amount="50">Rs.50</button>
+                <button class="amount-btn" data-amount="100">Rs.100</button>
+                <button class="amount-btn" data-amount="custom">Custom</button>
+              </div>
+              <div class="custom-amount" style="display: none;">
+                <input type="number" id="customAmount" placeholder="Enter amount" min="1" />
+              </div>
+            </div>
+            
+            <div class="payment-methods">
+              <h3>Payment Method</h3>
+              <div class="payment-options">
+                <button class="payment-btn active" data-method="card">
+                  <span class="payment-icon">💳</span>
+                  Credit/Debit Card
+                </button>
+                <button class="payment-btn" data-method="paypal">
+                  <span class="payment-icon">🅿️</span>
+                  PayPal
+                </button>
+                <button class="payment-btn" data-method="upi">
+                  <span class="payment-icon">📱</span>
+                  UPI
+                </button>
+              </div>
+            </div> -->
+            
+            <!-- Card Payment Form -->
+            <!-- <div class="payment-form card-form active">
+              <form id="cardPaymentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY" maxlength="5" />
+                  </div>
+                  <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" maxlength="3" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Cardholder Name</label>
+                    <input type="text" placeholder="John Doe" />
+                  </div>
+                </div>
+                <button type="submit" class="donate-button">
+                  <span class="donate-amount">Donate Rs.50</span>
+                  <span class="donate-icon">❤️</span>
+                </button>
+              </form>
+            </div> -->
+            
+            <!-- PayPal Form -->
+            <!-- <div class="payment-form paypal-form">
+              <div class="paypal-info">
+                <p>You will be redirected to PayPal to complete your donation securely.</p>
+                <button class="donate-button paypal-btn">
+                  <span class="donate-amount">Donate $50 via PayPal</span>
+                  <span class="donate-icon">🅿️</span>
+                </button>
+              </div>
+            </div> -->
+            
+            <!-- UPI Form -->
+            <!-- <div class="payment-form upi-form">
+              <div class="upi-options">
+                <div class="form-group">
+                  <label>UPI ID</label>
+                  <input type="text" placeholder="yourname@upi" />
+                </div>
+                <div class="qr-code-section">
+                  <p>Or scan QR code:</p>
+                  <div class="qr-placeholder">
+                    <div class="qr-code">📱</div>
+                    <p>QR Code</p>
+                  </div>
+                </div>
+                <button class="donate-button upi-btn">
+                  <span class="donate-amount">Donate $50 via UPI</span>
+                  <span class="donate-icon">📱</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+<!--         
+        <div class="donation-security">
+          <div class="security-badges">
+            <span class="security-badge">🔒 SSL Secured</span>
+            <span class="security-badge">✅ PCI Compliant</span>
+            <span class="security-badge">🛡️ 256-bit Encryption</span>
+          </div>
+          <p class="security-text">Your donation is secure and encrypted. We never store your payment information.</p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <strong>Email:</strong> fyfpvolunteer@gmail.com
+            </div>
+            <div class="contact-item">
+              <strong>Phone:</strong> +1 (555) 123-4567
+            </div>
+
+            <div class="social-links">
+              <h4>Follow Us</h4>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send us a Message</h3>
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Subject" required />
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="./assets/FYFP_logo.png" alt="FYFP Logo" class="footer-logo-image" />
+            <div class="footer-text">
+              <h3>FYFP</h3>
+              <p>From the Youth For the People</p>
+            </div>
+          </div>
+          <div class="footer-info">
+            <p>
+              &copy; 2025 From the Youth For the People. All rights reserved.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
