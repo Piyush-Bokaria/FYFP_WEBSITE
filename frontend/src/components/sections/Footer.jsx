@@ -15,7 +15,8 @@ export const Footer = () => {
                         <p className="mb-2">
                             &copy; 2026 From the Youth For the People. All rights reserved.
                         </p>
-                        <p>Designed with care for our community.</p>
+                        <p>Designed with care for our FYFP - Piyush.</p>
+                        <a href="/admin" className="opacity-10 hover:opacity-100 transition-opacity text-xs mt-4 block">Admin Login</a>
                     </div>
                 </div>
             </div>

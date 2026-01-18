@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { cn } from "@/lib/utils";
 
-export const Navbar = () => {
+export const Navbar = ({ onOpenFacultyForm }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -29,6 +29,14 @@ export const Navbar = () => {
                         </li>
                     ))}
                     <li>
+                        <button
+                            onClick={onOpenFacultyForm}
+                            className="nav-link font-bold uppercase text-[0.9rem] px-4 py-2 rounded-full text-[var(--c-text-main)] transition-colors hover:text-[var(--c-primary)] hover:bg-[var(--c-primary)]/5"
+                        >
+                            Books Collection
+                        </button>
+                    </li>
+                    <li>
                         <a href="#donate" className="ml-4 nav-link donate-nav bg-[var(--c-primary)] text-white font-bold uppercase text-[0.9rem] px-6 py-3 rounded-full shadow-md hover:bg-[#238b7e] hover:shadow-lg hover:-translate-y-0.5 transition-all">
                             Donate
                         </a>
@@ -49,6 +57,15 @@ export const Navbar = () => {
                     {['Home', 'About', 'Events', 'Gallery', 'Team', 'Impact', 'Contact'].map((item) => (
                         <a key={item} href={`#${item.toLowerCase()}`} className="text-xl font-bold uppercase text-[var(--c-text-main)]" onClick={() => setMobileMenuOpen(false)}>{item}</a>
                     ))}
+                    <button
+                        className="text-xl font-bold uppercase text-[var(--c-text-main)] text-left"
+                        onClick={() => {
+                            onOpenFacultyForm();
+                            setMobileMenuOpen(false);
+                        }}
+                    >
+                        Faculty
+                    </button>
                     <a href="#donate" className="text-xl font-bold uppercase bg-[var(--c-primary)] text-white p-3 text-center rounded-xl shadow-md" onClick={() => setMobileMenuOpen(false)}>Donate</a>
                 </div>
             )}
