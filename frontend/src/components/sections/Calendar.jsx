@@ -20,20 +20,20 @@ export const Calendar = () => {
                 <div className="relative">
                     {(() => {
                         const events = [
-                            { month: 'JULY 2025', title: 'Project Nidhesh', desc: 'Consectetur adipiscing elit sed do eiusmod', type: 'Community', color: 'bg-teal-500' },
-                            { month: 'AUG 2025', title: 'Independence day Celebrations', desc: 'Ut labore et dolore magna aliqua', type: 'Awareness', color: 'bg-orange-500' },
-                            { month: 'OCT 2025', title: 'Project Kitab', desc: 'Veniam quis nostrud exercitation ullamco', type: 'Social', color: 'bg-blue-500' },
-                            { month: 'DEC 2025', title: 'Project Vakankur', desc: 'Aliquip ex ea commodo consequat duis', type: 'Workshop', color: 'bg-purple-500' },
-                            { month: 'DEC 2025', title: 'Digital Bootcamp', desc: 'In reprehenderit in voluptate velit esse', type: 'Fundraising', color: 'bg-pink-500' },
-                            { month: 'JAN 2026', title: 'Project Swayamika', desc: 'Fugiat nulla pariatur excepteur sint', type: 'Service', color: 'bg-green-500' },
-                            { month: 'JAN 2026', title: 'Camps for Training on CPR', desc: 'Fugiat nulla pariatur excepteur sint', type: 'Service', color: 'bg-teal-500' },
-                            { month: 'JAN 2026', title: 'Cloth Donation camp', desc: 'Ut labore et dolore magna aliqua', type: 'Awareness', color: 'bg-orange-500' },
-                            { month: 'JAN 2026', title: '15th anniversary celebrations', desc: 'Veniam quis nostrud exercitation ullamco', type: 'Social', color: 'bg-blue-500' },
-                            { month: 'JAN 2026', title: 'Republic Day Celebrations', desc: 'Aliquip ex ea commodo consequat duis', type: 'Workshop', color: 'bg-purple-500' },
-                            { month: 'FEB 2026', title: 'Project Vikas', desc: 'In reprehenderit in voluptate velit esse', type: 'Fundraising', color: 'bg-pink-500' },
-                            { month: 'FEB 2026', title: 'National Science Day Celebrations', desc: 'Fugiat nulla pariatur excepteur sint', type: 'Service', color: 'bg-green-500' },
-                            { month: 'MAR 2026', title: 'Annual Day Stall', desc: 'Fugiat nulla pariatur excepteur sint', type: 'Service', color: 'bg-teal-500' },
-                            { month: 'MAR 2026', title: 'Next Academic year team elections', desc: 'Ut labore et dolore magna aliqua', type: 'Awareness', color: 'bg-orange-500' }
+                            { month: 'JULY 2025', title: 'Project Nidhesh', desc: 'Consectetur adipiscing elit sed do eiusmod'},
+                            { month: 'AUG 2025', title: 'Independence day Celebrations', desc: 'Ut labore et dolore magna aliqua'},
+                            { month: 'OCT 2025', title: 'Project Kitab', desc: 'Veniam quis nostrud exercitation ullamco'},
+                            { month: 'DEC 2025', title: 'Project Vakankur', desc: 'Aliquip ex ea commodo consequat duis'},
+                            { month: 'DEC 2025', title: 'Digital Bootcamp', desc: 'In reprehenderit in voluptate velit esse'},
+                            { month: 'JAN 2026', title: 'Project Swayamika', desc: 'Fugiat nulla pariatur excepteur sint'},
+                            { month: 'JAN 2026', title: 'Camps for Training on CPR', desc: 'Fugiat nulla pariatur excepteur sint'},
+                            { month: 'JAN 2026', title: 'Cloth Donation camp', desc: 'Ut labore et dolore magna aliqua'},
+                            { month: 'JAN 2026', title: '15th anniversary celebrations', desc: 'Veniam quis nostrud exercitation ullamco'},
+                            { month: 'JAN 2026', title: 'Republic Day Celebrations', desc: 'Aliquip ex ea commodo consequat duis'},
+                            { month: 'FEB 2026', title: 'Project Vikas', desc: 'In reprehenderit in voluptate velit esse'},
+                            { month: 'FEB 2026', title: 'National Science Day Celebrations', desc: 'Fugiat nulla pariatur excepteur sint'},
+                            { month: 'MAR 2026', title: 'Annual Day Stall', desc: 'Fugiat nulla pariatur excepteur sint'},
+                            { month: 'MAR 2026', title: 'Next Academic year team elections', desc: 'Ut labore et dolore magna aliqua'}
                         ];
 
                         const visibleEvents = showAll ? events : events.slice(0, INITIAL_VISIBLE_COUNT);
@@ -43,7 +43,6 @@ export const Calendar = () => {
                                 <div className="md:hidden relative border-l-2 border-[var(--c-primary)]/20 ml-4 pl-8 space-y-12">
                                     {visibleEvents.map((event, index) => (
                                         <div key={index} className="relative">
-                                            {/* Dot */}
                                             <div className="absolute -left-[calc(2rem_+_1px)] top-0 w-4 h-4 rounded-full bg-white border-[3px] border-[var(--c-primary)]"></div>
 
                                             <div className="bg-[var(--c-bg-main)] p-6 rounded-3xl shadow-sm border border-transparent">
@@ -58,14 +57,13 @@ export const Calendar = () => {
                                 </div>
 
                                 <div className="hidden md:block">
-                                    
+
                                     {visibleEvents.map((event, index) => {
                                         const isEven = index % 2 === 0;
                                         const isLast = index === visibleEvents.length - 1;
 
                                         return (
                                             <div key={index} className="grid grid-cols-[1fr_100px_1fr] h-full min-h-[180px]">
-                                                {/* Left Column */}
                                                 <div className={cn("flex flex-col justify-start py-4 pr-8", isEven ? "items-end text-right" : "")}>
                                                     {isEven && (
                                                         <div className="bg-[var(--c-bg-main)] p-8 rounded-3xl shadow-sm hover:shadow-card transition-all duration-300 border border-transparent hover:border-[var(--c-primary)]/10 max-w-lg w-full relative group">
@@ -78,16 +76,13 @@ export const Calendar = () => {
                                                     )}
                                                 </div>
 
-                                                {/* Center Column (Snake) */}
                                                 <div className="relative h-full w-full">
-                                                    {/* Dot */}
                                                     <div className={cn(
                                                         "absolute top-12 w-5 h-5 rounded-full bg-white border-[4px] border-[var(--c-primary)] z-20 shadow-sm transform transition-transform duration-300 hover:scale-150",
                                                         isEven ? "left-0 -translate-x-1/2" : "right-0 translate-x-1/2"
                                                     )}
                                                     ></div>
 
-                                                    {/* Connector Curve */}
                                                     {!isLast && (
                                                         <svg
                                                             className="absolute top-12 w-full h-[calc(100%_+_0px)] overflow-visible"
@@ -95,7 +90,6 @@ export const Calendar = () => {
                                                             viewBox="0 0 100 100"
                                                         >
                                                             {isEven ? (
-                                                                // Left to Right Curve
                                                                 <path
                                                                     d="M 0 0 C 0 50, 100 50, 100 100"
                                                                     fill="none"
@@ -106,7 +100,6 @@ export const Calendar = () => {
                                                                     vectorEffect="non-scaling-stroke"
                                                                 />
                                                             ) : (
-                                                                // Right to Left Curve
                                                                 <path
                                                                     d="M 100 0 C 100 50, 0 50, 0 100"
                                                                     fill="none"
@@ -120,8 +113,7 @@ export const Calendar = () => {
                                                         </svg>
                                                     )}
                                                 </div>
-
-                                                {/* Right Column */}
+                                                
                                                 <div className={cn("flex flex-col justify-start py-4 pl-8", !isEven ? "items-start text-left" : "")}>
                                                     {!isEven && (
                                                         <div className="bg-[var(--c-bg-main)] p-8 rounded-3xl shadow-sm hover:shadow-card transition-all duration-300 border border-transparent hover:border-[var(--c-primary)]/10 max-w-lg w-full relative group">
