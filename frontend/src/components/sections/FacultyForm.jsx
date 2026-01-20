@@ -50,7 +50,7 @@ const FacultyForm = ({ isOpen, onClose }) => {
                                 <option value="chem">Chemical Engineering</option>
                                 <option value="civil">Civil Engineering</option>
                                 <option value="CSE">Computer Science and Engineering</option>
-                                <option value="DE">Data Engeering</option>
+                                <option value="DE">Data Engineering</option>
                                 <option value="EEE">Electrical and Electronics Engineering</option>
                                 <option value="ECE">Electronics and Communication Engineering</option>
                                 <option value="IECT">Information Engineering & Computation Technology</option>
