@@ -11,7 +11,7 @@ export const Calendar = () => {
 
             <div className="container max-w-[1400px] mx-auto px-6 relative z-10">
                 <div className="mb-20 text-center">
-                    <h2 className="text-[3rem] text-[var(--c-text-main)] font-[800] uppercase tracking-tight mb-4">Academic Year 2024-25</h2>
+                    <h2 className="text-[3rem] text-[var(--c-text-main)] font-[800] uppercase tracking-tight mb-4">Academic Year 2025-26</h2>
                     <p className="font-medium text-[var(--c-text-light)] text-lg max-w-2xl mx-auto leading-relaxed">
                         Keeping our community connected through shared events and milestones.
                     </p>
