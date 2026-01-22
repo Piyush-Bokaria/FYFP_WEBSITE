@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { cn } from "@/lib/utils";
 
-export const Navbar = ({ onOpenFacultyForm }) => {
+export const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -29,15 +29,22 @@ export const Navbar = ({ onOpenFacultyForm }) => {
                         </li>
                     ))}
                     <li>
-                        <button
-                            onClick={onOpenFacultyForm}
+                        <a
+                            href="https://forms.gle/placeholder"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="nav-link font-bold uppercase text-[0.9rem] px-4 py-2 rounded-full text-[var(--c-text-main)] transition-colors hover:text-[var(--c-primary)] hover:bg-[var(--c-primary)]/5"
                         >
                             Books Collection
-                        </button>
+                        </a>
                     </li>
                     <li>
-                        <a href="#donate" className="ml-4 nav-link donate-nav bg-[var(--c-primary)] text-white font-bold uppercase text-[0.9rem] px-6 py-3 rounded-full shadow-md hover:bg-[#238b7e] hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                        <a
+                            href="https://forms.gle/donate-placeholder"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-4 nav-link donate-nav bg-[var(--c-primary)] text-white font-bold uppercase text-[0.9rem] px-6 py-3 rounded-full shadow-md hover:bg-[#238b7e] hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                        >
                             Donate
                         </a>
                     </li>
@@ -57,18 +64,26 @@ export const Navbar = ({ onOpenFacultyForm }) => {
                     {['Home', 'About', 'Events', 'Gallery', 'Team', 'Impact', 'Contact'].map((item) => (
                         <a key={item} href={`#${item.toLowerCase()}`} className="text-xl font-bold uppercase text-[var(--c-text-main)]" onClick={() => setMobileMenuOpen(false)}>{item}</a>
                     ))}
-                    <button
+                    <a
+                        href="https://forms.gle/placeholder"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-xl font-bold uppercase text-[var(--c-text-main)] text-left"
-                        onClick={() => {
-                            onOpenFacultyForm();
-                            setMobileMenuOpen(false);
-                        }}
+                        onClick={() => setMobileMenuOpen(false)}
                     >
-                        Faculty
-                    </button>
-                    <a href="#donate" className="text-xl font-bold uppercase bg-[var(--c-primary)] text-white p-3 text-center rounded-xl shadow-md" onClick={() => setMobileMenuOpen(false)}>Donate</a>
-                </div>
+                        Books Collection
+                    </a>
+                    <a
+                        href="https://forms.gle/donate-placeholder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xl font-bold uppercase bg-[var(--c-primary)] text-white p-3 text-center rounded-xl shadow-md"
+                        onClick={() => setMobileMenuOpen(false)}
+                    >
+                        Donate
+                    </a>
+                </div >
             )}
-        </nav>
+        </nav >
     );
 };

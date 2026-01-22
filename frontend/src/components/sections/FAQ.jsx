@@ -16,9 +16,9 @@ export const FAQ = () => {
                     {[
                         { q: 'What is FYFP?', a: 'FYFP is MVGR College Of Engineering Student Club, focussed on helping the society through various activities and events.' },
                         { q: 'What is the role of FYFP?', a: 'FYFP is MVGR College Of Engineering Student Club, focussed on helping the society through various activities and events.' },
-                        { q: 'What are the activities of FYFP?', a: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+                        { q: 'What are the activities of FYFP?', a: 'FYFP conducts mulitple events and activities to uplift the society, which includes Project Kitab, Project Vikas, Project Setu, Streetplay, Project Nidesh, Project Swayamika.' },
                         { q: 'How to join FYFP?', a: 'To join FYFP, you dont need any requirements. Just come and join us at our events and activities.' },
-                        { q: 'What are the achievements of FYFP?', a: 'Aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.' }
+                        { q: 'What are the achievements of FYFP?', a: 'FYFP has been able to uplift the society through various activities and events, and has been able to make a positive impact on the lives of many people.' }
                     ].map((item, index) => (
                         <div key={index} className="faq-item group">
                             <div

@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { Navbar } from "@/components/sections/Navbar";
-import { FacultyForm } from "@/components/sections/FacultyForm";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Events } from "@/components/sections/Events";
@@ -15,12 +14,9 @@ import { Footer } from "@/components/sections/Footer";
 import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 
 function LandingPage() {
-    const [isFacultyFormOpen, setIsFacultyFormOpen] = useState(false);
-
     return (
         <main className="min-h-screen bg-[#F2F2F0] text-black font-sans selection:bg-[#CCFF00] selection:text-black">
-            <Navbar onOpenFacultyForm={() => setIsFacultyFormOpen(true)} />
-            <FacultyForm isOpen={isFacultyFormOpen} onClose={() => setIsFacultyFormOpen(false)} />
+            <Navbar />
             <Hero />
             <RevealOnScroll><About /></RevealOnScroll>
             <RevealOnScroll><Events /></RevealOnScroll>
