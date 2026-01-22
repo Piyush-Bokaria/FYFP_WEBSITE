@@ -6,3 +6,6 @@ asyncpg
 pydantic-settings
 python-dotenv
 psycopg2-binary
+passlib[argon2]
+python-jose[cryptography]
+python-multipart

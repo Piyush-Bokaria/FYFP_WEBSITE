@@ -17,8 +17,6 @@ class CalendarActivity(Base):
     month = Column(String)
     title = Column(String)
     description = Column(Text)
-    type = Column(String) # Community, Awareness, Social, etc.
-    color = Column(String) # bg-teal-500 etc.
 
 class GalleryItem(Base):
     __tablename__ = "gallery_items"
@@ -36,4 +34,12 @@ class TeamMember(Base):
     name = Column(String)
     role = Column(String)
     image_url = Column(String, nullable=True)
+    profile_link = Column(String, nullable=True)
     category = Column(String) # 'core' or 'multimedia' etc, to distinguish grid placement
+
+class AdminUser(Base):
+    __tablename__ = "admin_users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    hashed_password = Column(String)

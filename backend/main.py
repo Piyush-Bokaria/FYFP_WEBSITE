@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
-from routers import events, calendar, gallery, team
+from routers import events, calendar, gallery, team, auth
 import contextlib
 
 @contextlib.asynccontextmanager
@@ -16,7 +16,7 @@ app = FastAPI(lifespan=lifespan)
 
 # CORS Configuration
 origins = [
-    "http://localhost:5173", # Vite default
+    "http://localhost:5173",
     "http://localhost:3000",
 ]
 
@@ -28,15 +28,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(auth.router)
 app.include_router(events.router)
 app.include_router(calendar.router)
 app.include_router(gallery.router)
 app.include_router(team.router)
 
-@app.get("/")
+@app.get("/api")
 async def root():
     return {"message": "FYFP API is running"}
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

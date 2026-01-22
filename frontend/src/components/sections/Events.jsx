@@ -1,10 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Modal } from "@/components/ui/modal";
 
 export const Events = () => {
     const [activeTab, setActiveTab] = useState('upcoming');
     const [selectedEvent, setSelectedEvent] = useState(null);
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchEvents = async () => {
+            try {
+                const response = await fetch('/api/events/');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch events');
+                }
+                const data = await response.json();
+                const formattedData = data.map(event => ({
+                    ...event,
+                    desc: event.description // Map backend 'description' to frontend 'desc'
+                }));
+                setEvents(formattedData);
+            } catch (err) {
+                console.error(err);
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchEvents();
+    }, []);
+
+    const filteredEvents = events.filter(event =>
+        activeTab === 'upcoming' ? event.is_upcoming : !event.is_upcoming
+    );
 
     return (
         <section id="events" className="events py-24 bg-[var(--c-bg-main)]">
@@ -32,14 +63,11 @@ export const Events = () => {
                 </div>
 
                 <div className="events-content grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {(activeTab === 'upcoming' ? [
-                        { title: "15 year's anniversary", date: "January 24, 2026", desc: "Join us for 15th year's anniversary celebration of foundation of the club." },
-                        { title: "National Science Day", date: "February 28, 2026", desc: "A event focused on creating awareness and collaborating with the schools to promote innovation among the students." }
-                    ] : [
-                        { title: "Project Swayamika", date: "January 3, 2026", desc: "A event focused on creating awareness among the female students about menstrual health, hygiene, Good & Bad Touch" },
-                        { title: "Project Vikas - Digital Bootcamp", date: "December 27, 2025", desc: "A gathering of school students from Sarika Government School for a hands-on computer learning session." },
-                        { title: "Project Kitab", date: "October 24, 2025", desc: "Distribution of books and neccessities to school students." }
-                    ]).map((event, i) => (
+                    {loading ? (
+                        <div className="col-span-3 text-center py-12 text-[var(--c-primary)] font-bold">Loading events...</div>
+                    ) : error ? (
+                        <div className="col-span-3 text-center py-12 text-red-500 font-bold">Error: {error}</div>
+                    ) : filteredEvents.map((event, i) => (
                         <div
                             key={i}
                             onClick={() => setSelectedEvent(event)}

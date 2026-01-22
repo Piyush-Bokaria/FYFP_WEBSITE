@@ -9,10 +9,10 @@ export const Impact = () => {
 
                 <div className="impact-stats grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
                     {[
-                        { number: '500+', label: 'Students Engaged', color: 'bg-teal-50' },
-                        { number: '25', label: 'Community Projects', color: 'bg-orange-50' },
-                        { number: '1k+', label: 'Volunteer Hours', color: 'bg-blue-50' },
-                        { number: '15', label: 'Partners', color: 'bg-yellow-50' }
+                        { number: '1000+', label: 'Students Benefitted', color: 'bg-teal-50' },
+                        { number: '10k+', label: 'Books distributed', color: 'bg-orange-50' },
+                        { number: '4 lakhs+', label: 'rupees raised through recycling', color: 'bg-blue-50' },
+                        { number: '20+', label: 'Schools Benefitted', color: 'bg-yellow-50' }
                     ].map((stat, index) => (
                         <div key={index} className={`stat-card rounded-3xl p-8 text-center transition-transform hover:-translate-y-1 ${stat.color}`}>
                             <div className="stat-number text-[3rem] font-[900]] mb-2 leading-none">{stat.number}</div>

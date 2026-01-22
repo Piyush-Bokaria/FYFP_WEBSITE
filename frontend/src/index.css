@@ -339,6 +339,7 @@ ul {
   box-shadow: var(--shadow-hard);
   transform: rotate(-1deg);
   max-width: 800px;
+  margin-right: 15px;
 }
 
 /* ABOUT SECTION */
@@ -380,6 +381,7 @@ ul {
   border: var(--border-thick);
   transform: rotate(1deg);
   box-shadow: -8px 8px 0px var(--c-accent);
+  top: 25%;
 }
 
 .about-values h3 {

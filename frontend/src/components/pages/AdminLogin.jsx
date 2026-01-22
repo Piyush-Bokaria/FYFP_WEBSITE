@@ -19,7 +19,7 @@ const AdminLogin = () => {
         return null;
     };
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setError('');
 
@@ -31,10 +31,28 @@ const AdminLogin = () => {
             return;
         }
 
-        // Placeholder for authentication logic
-        console.log("Logging in with:", email, "Sanitized");
-        // Simulate successful login or navigate
-        // navigate('/dashboard');
+        try {
+            const formData = new FormData();
+            formData.append('username', email);
+            formData.append('password', password);
+
+            const response = await fetch('/api/auth/token', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || 'Login failed');
+            }
+
+            const data = await response.json();
+            localStorage.setItem('access_token', data.access_token);
+            navigate('/admin/dashboard');
+        } catch (err) {
+            console.error('Login failed:', err);
+            setError('Invalid credentials or server error');
+        }
     };
 
     return (
