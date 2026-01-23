@@ -33,13 +33,16 @@ const AdminLogin = () => {
         }
 
         try {
-            const formData = new FormData();
-            formData.append('username', email);
-            formData.append('password', password);
+            const body = new URLSearchParams();
+            body.append('username', email);
+            body.append('password', password);
 
             const response = await fetch(`${API}/auth/token`, {
                 method: 'POST',
-                body: formData,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: body.toString(),
             });
 
             if (!response.ok) {
@@ -55,6 +58,7 @@ const AdminLogin = () => {
             setError('Invalid credentials or server error');
         }
     };
+
 
     return (
         <div className="min-h-screen bg-[var(--c-bg)] flex items-center justify-center p-4">
