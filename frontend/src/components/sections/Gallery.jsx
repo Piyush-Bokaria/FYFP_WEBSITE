@@ -9,7 +9,8 @@ export const Gallery = () => {
     useEffect(() => {
         const fetchGallery = async () => {
             try {
-                const response = await fetch(`/gallery/`);
+                const response = await fetch(`${API}/gallery/`);
+                console.log(`${API}/gallery/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch gallery items');
                 }
