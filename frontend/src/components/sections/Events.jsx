@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Modal } from "@/components/ui/modal";
+import { API } from "../../config";
 
 export const Events = () => {
     const [activeTab, setActiveTab] = useState('upcoming');
@@ -8,12 +9,11 @@ export const Events = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const API = 
 
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('${API}/events/');
+                const response = await fetch(`${API}/events/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }

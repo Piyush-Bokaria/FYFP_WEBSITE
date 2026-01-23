@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API } from "../../config";
 
 export const Gallery = () => {
     const [items, setItems] = useState([]);
@@ -8,7 +9,7 @@ export const Gallery = () => {
     useEffect(() => {
         const fetchGallery = async () => {
             try {
-                const response = await fetch('${API}/gallery/');
+                const response = await fetch(`${API}/gallery/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch gallery items');
                 }

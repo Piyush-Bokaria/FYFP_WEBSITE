@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API } from "../../config";
 
 export const Team = () => {
     const [teamMembers, setTeamMembers] = useState([]);
@@ -8,7 +9,7 @@ export const Team = () => {
     useEffect(() => {
         const fetchTeam = async () => {
             try {
-                const response = await fetch('${API}/team/');
+                const response = await fetch(`${API}/team/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch team members');
                 }

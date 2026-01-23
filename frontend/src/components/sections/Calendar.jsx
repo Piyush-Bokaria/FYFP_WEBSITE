@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
+import { API } from "../../config";
 
 export const Calendar = () => {
     const [showAll, setShowAll] = useState(false);
@@ -11,7 +12,7 @@ export const Calendar = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('${API}/calendar/');
+                const response = await fetch(`${API}/calendar/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch calendar activities');
                 }
