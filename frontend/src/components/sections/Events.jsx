@@ -8,11 +8,12 @@ export const Events = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const API = 
 
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('/api/events/');
+                const response = await fetch('${API}/events/');
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }
