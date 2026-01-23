@@ -49,7 +49,7 @@ const AdminLogin = () => {
 
             const data = await response.json();
             localStorage.setItem('access_token', data.access_token);
-            navigate(`${API}/admin/dashboard`);
+            navigate('/admin/dashboard');
         } catch (err) {
             console.error('Login failed:', err);
             setError('Invalid credentials or server error');
