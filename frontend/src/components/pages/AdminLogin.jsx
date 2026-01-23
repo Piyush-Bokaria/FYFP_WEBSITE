@@ -37,7 +37,7 @@ const AdminLogin = () => {
             formData.append('username', email);
             formData.append('password', password);
 
-            const response = await fetch(`${API}/api/auth/token`, {
+            const response = await fetch(`${API}/auth/token`, {
                 method: 'POST',
                 body: formData,
             });
