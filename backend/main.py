@@ -18,6 +18,7 @@ app = FastAPI(lifespan=lifespan)
 origins = [
     "http://localhost:5173",
     "http://localhost:3000",
+    "https://fyfp-website-hthb.onrender.com",
 ]
 
 app.add_middleware(
