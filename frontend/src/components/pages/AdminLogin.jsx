@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { API } from '../../config';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
@@ -36,7 +37,7 @@ const AdminLogin = () => {
             formData.append('username', email);
             formData.append('password', password);
 
-            const response = await fetch('/api/auth/token', {
+            const response = await fetch(`${API}/api/auth/token`, {
                 method: 'POST',
                 body: formData,
             });
@@ -48,12 +49,13 @@ const AdminLogin = () => {
 
             const data = await response.json();
             localStorage.setItem('access_token', data.access_token);
-            navigate('/admin/dashboard');
+            navigate(`${API}/admin/dashboard`);
         } catch (err) {
             console.error('Login failed:', err);
             setError('Invalid credentials or server error');
         }
     };
+
 
     return (
         <div className="min-h-screen bg-[var(--c-bg)] flex items-center justify-center p-4">
