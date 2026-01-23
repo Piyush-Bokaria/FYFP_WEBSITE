@@ -16,7 +16,7 @@ export const CalendarManager = () => {
     const fetchActivities = async () => {
         setLoading(true);
         try {
-            const response = await fetch('/api/calendar/');
+            const response = await fetch(`${API}/calendar/`);
             const data = await response.json();
             setActivities(data);
         } catch (error) {
@@ -38,7 +38,7 @@ export const CalendarManager = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = editMode ? `/api/calendar/${currentId}` : '/api/calendar/';
+            const url = editMode ? `${API}/calendar/${currentId}` : `${API}/calendar/`;
             const method = editMode ? 'PUT' : 'POST';
 
             const response = await fetch(url, {
@@ -64,7 +64,7 @@ export const CalendarManager = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this activity?')) {
             try {
-                const response = await fetch(`/api/calendar/${id}`, {
+                const response = await fetch(`${API}/calendar/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`

@@ -17,7 +17,7 @@ export const GalleryManager = () => {
     const fetchItems = async () => {
         setLoading(true);
         try {
-            const response = await fetch('/api/gallery/');
+            const response = await fetch(`${API}/gallery/`);
             const data = await response.json();
             setItems(data);
         } catch (error) {
@@ -39,7 +39,7 @@ export const GalleryManager = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = editMode ? `/api/gallery/${currentId}` : '/api/gallery/';
+            const url = editMode ? `${API}/gallery/${currentId}` : `${API}/gallery/`;
             const method = editMode ? 'PUT' : 'POST';
 
             // Handle optional image_url
@@ -69,7 +69,7 @@ export const GalleryManager = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this item?')) {
             try {
-                const response = await fetch(`/api/gallery/${id}`, {
+                const response = await fetch(`$/gallery/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`

@@ -17,7 +17,7 @@ export const EventManager = () => {
     const fetchEvents = async () => {
         setLoading(true);
         try {
-            const response = await fetch('/api/events/');
+            const response = await fetch(`${API}/events/`);
             const data = await response.json();
             setEvents(data);
         } catch (error) {
@@ -42,7 +42,7 @@ export const EventManager = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = editMode ? `/api/events/${currentId}` : '/api/events/';
+            const url = editMode ? `${API}/events/${currentId}` : `${API}/events/`;
             const method = editMode ? 'PUT' : 'POST';
 
             const response = await fetch(url, {
@@ -68,7 +68,7 @@ export const EventManager = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this event?')) {
             try {
-                const response = await fetch(`/api/events/${id}`, {
+                const response = await fetch(`${API}/events/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`

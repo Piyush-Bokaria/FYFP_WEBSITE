@@ -18,7 +18,7 @@ export const TeamManager = () => {
     const fetchMembers = async () => {
         setLoading(true);
         try {
-            const response = await fetch('/api/team/');
+            const response = await fetch(`${API}/team/`);
             const data = await response.json();
             setMembers(data);
         } catch (error) {
@@ -40,7 +40,7 @@ export const TeamManager = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = editMode ? `/api/team/${currentId}` : '/api/team/';
+            const url = editMode ? `${API}/team/${currentId}` : `${API}/team/`;
             const method = editMode ? 'PUT' : 'POST';
 
             // Handle optional fields
@@ -71,7 +71,7 @@ export const TeamManager = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this member?')) {
             try {
-                const response = await fetch(`/api/team/${id}`, {
+                const response = await fetch(`${API}/team/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`

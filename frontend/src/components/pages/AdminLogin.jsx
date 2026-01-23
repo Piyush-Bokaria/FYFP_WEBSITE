@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { API } from '../../config';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
@@ -55,7 +54,6 @@ const AdminLogin = () => {
             setError('Invalid credentials or server error');
         }
     };
-
 
     return (
         <div className="min-h-screen bg-[var(--c-bg)] flex items-center justify-center p-4">
