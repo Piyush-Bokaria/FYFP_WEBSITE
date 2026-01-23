@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 export const CalendarManager = () => {
     const [activities, setActivities] = useState([]);
     const [loading, setLoading] = useState(true);

@@ -4,6 +4,7 @@ import { EventManager } from '../admin/EventManager';
 import { CalendarManager } from '../admin/CalendarManager';
 import { TeamManager } from '../admin/TeamManager';
 import { GalleryManager } from '../admin/GalleryManager';
+import { API } from "../../config";
 
 export const AdminDashboard = () => {
     const navigate = useNavigate();

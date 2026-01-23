@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 export const GalleryManager = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -69,7 +70,7 @@ export const GalleryManager = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this item?')) {
             try {
-                const response = await fetch(`$/gallery/${id}`, {
+                const response = await fetch(`${API}/gallery/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`

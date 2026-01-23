@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API } from "../../config";
 
 export const EventManager = () => {
     const [events, setEvents] = useState([]);

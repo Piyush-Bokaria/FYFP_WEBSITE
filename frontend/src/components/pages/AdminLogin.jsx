@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { API } from "../../config";
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
@@ -38,7 +39,7 @@ const AdminLogin = () => {
 
             const response = await fetch(`${API}/auth/token`, {
                 method: 'POST',
-                    headers: {
+                headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: formData,
