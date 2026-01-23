@@ -39,9 +39,6 @@ const AdminLogin = () => {
 
             const response = await fetch(`${API}/auth/token`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
                 body: formData,
             });
 
