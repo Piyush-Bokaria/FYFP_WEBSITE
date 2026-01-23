@@ -12,7 +12,7 @@ export const Calendar = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch(`${API}/calendar/`);
+                const response = await fetch(`/calendar/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch calendar activities');
                 }

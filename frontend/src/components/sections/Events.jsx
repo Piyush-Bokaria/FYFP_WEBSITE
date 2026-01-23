@@ -13,7 +13,7 @@ export const Events = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch(`${API}/events/`);
+                const response = await fetch(`/events/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch events');
                 }

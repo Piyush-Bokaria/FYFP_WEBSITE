@@ -9,7 +9,7 @@ export const Team = () => {
     useEffect(() => {
         const fetchTeam = async () => {
             try {
-                const response = await fetch(`${API}/team/`);
+                const response = await fetch(`/team/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch team members');
                 }
