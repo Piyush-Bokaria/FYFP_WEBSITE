@@ -6,6 +6,17 @@ export const Gallery = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const FALLBACK_GALLERY_DATA = [
+        { title: 'Project Nidesh', date: 'JULY 2025', link: "https://drive.google.com/drive/folders/1VLT9pCch-V3Qhv-59XVatTb9FOLrPy1q" },
+        { title: 'Independence day Celebrations', date: 'AUG 2025', link: "https://drive.google.com/drive/folders/1VgHbBqYt5mXq1YEy3tG6kbbtkRZntQBK" },
+        { title: 'Project Kitab', date: 'OCT 2025', link: "https://drive.google.com/drive/folders/1vlaG183pgFQPrJMXBIq1V6XJkJZ75Ylb" },
+        { title: 'Project Vakankur', date: 'DEC 2025', link: "https://drive.google.com/drive/folders/1a_t6np3tABJ5hMFc91R9nhtZDTNyME1u" },
+        { title: 'Digital Bootcamp', date: 'DEC 2025', link: "https://drive.google.com/drive/folders/1quebjhzKVUBD04SoEzxjtiMPUeiP3hSC" },
+        { title: 'Project Swayamika', date: 'JAN 2025', link: "https://drive.google.com/drive/folders/1BEbZ_paQuN50SdBBJX1WY_b9_fcLABGC" },
+        { title: 'Camps for Training on CPR', date: 'JAN 2025', link: "#" },
+        { title: 'Cloth Donation camp', date: 'JAN 2025', link: "#" },
+    ];
+
     useEffect(() => {
         const fetchGallery = async () => {
             try {
@@ -16,9 +27,11 @@ export const Gallery = () => {
                 }
                 const data = await response.json();
                 setItems(data);
+                setError(null);
             } catch (err) {
-                console.error(err);
-                setError(err.message);
+                console.error("Using fallback data for gallery:", err);
+                setItems(FALLBACK_GALLERY_DATA);
+                setError(null); // Clear error since we have fallback
             } finally {
                 setLoading(false);
             }

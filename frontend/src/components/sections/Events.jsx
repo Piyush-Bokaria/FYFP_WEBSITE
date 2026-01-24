@@ -10,6 +10,21 @@ export const Events = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const FALLBACK_EVENTS_DATA = [
+        { title: "Project Nidhesh", date: "July 2025", desc: "Career guidance sessions for school students on competitive exams and future opportunities.", is_upcoming: false },
+        { title: "Independence Day Celebrations", date: "August 15, 2025", desc: "Conducting games and competitions for school students, along with distributing mementos and certificates to the winners.", is_upcoming: false },
+        { title: "Project Kitab", date: "October 2025", desc: "Annual event providing textbooks, notebooks, stationery, and other educational essentials to school children.", is_upcoming: false },
+        { title: "Project Vakankur", date: "December 20, 2025", desc: "Building a greener tomorrow by engaging school students in tree plantation and environmental conservation activities.", is_upcoming: false },
+        { title: "Project Vikas - Digital Bootcamp", date: "December 27, 2025", desc: "A hands-on computer learning session for school students from Sarika Government School.", is_upcoming: false },
+        { title: "Project Swayamika", date: "January 3, 2026", desc: "Empowerment sessions for female students covering menstrual health, personal safety (Good Touch-Bad Touch), and related topics.", is_upcoming: false },
+        { title: "15 Year's Anniversary", date: "January 24, 2026", desc: "Celebrating the 15th anniversary of FYFP and its journey of social impact.", is_upcoming: false },
+        { title: "Republic Day Celebrations", date: "January 26, 2026", desc: "Presenting certificates of appreciation to final year students who volunteered with FYFP for their valuable support towards the club and its initiatives.", is_upcoming: true },
+        { title: "Project Vikas", date: "February 2026", desc: "Academic support for school students and awareness programs on various educational topics.", is_upcoming: true },
+        { title: "National Science Day", date: "February 28, 2026", desc: "An event focused on creating awareness and collaborating with schools to promote innovation among students, along with helping and displaying projects at schools.", is_upcoming: true },
+        { title: "Annual Day Stall", date: "March 2026", desc: "Showcasing the achievements of the club at the annual day celebration.", is_upcoming: true },
+        { title: "Next Academic Year Team Elections", date: "March 2026", desc: "Elections conducted to select the team for the next academic year.", is_upcoming: true },
+    ];
+
     useEffect(() => {
         const fetchEvents = async () => {
             try {
@@ -24,9 +39,11 @@ export const Events = () => {
                     desc: event.description // Map backend 'description' to frontend 'desc'
                 }));
                 setEvents(formattedData);
+                setError(null);
             } catch (err) {
-                console.error(err);
-                setError(err.message);
+                console.error("Using fallback data for events:", err);
+                setEvents(FALLBACK_EVENTS_DATA);
+                setError(null); // Clear error since we have fallback
             } finally {
                 setLoading(false);
             }

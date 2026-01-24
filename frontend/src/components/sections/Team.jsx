@@ -6,6 +6,15 @@ export const Team = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const FALLBACK_TEAM_DATA = [
+        { name: 'Dr. K Satyanarayana Raju', role: 'FYFP Convenor', category: 'convenor', image_url: './assets/ksraju.jpg', profile_link: 'https://mvgrce.edu.in/faculty-of-mvgr/?dept=ECE&fid=59' },
+        { name: 'L. Prasanth', role: 'President', category: 'core', image_url: './assets/President.jpeg' },
+        { name: 'K V Navadeep Kumar', role: 'Secretary', category: 'core', image_url: "./assets/Secretary.jpeg" },
+        { name: 'K.Bharat', role: 'Treasurer', category: 'core', image_url: "./assets/Treasurer.jpeg" },
+        { name: 'S.Vennela', role: 'Multimedia Design Head', category: 'extended', image_url: "./assets/Design-Head.jpeg" },
+        { name: 'K.Hima Bindu', role: 'PR & Outreach', category: 'extended', image_url: "./assets/PR-Head.jpeg" },
+    ];
+
     useEffect(() => {
         const fetchTeam = async () => {
             try {
@@ -16,9 +25,11 @@ export const Team = () => {
                 }
                 const data = await response.json();
                 setTeamMembers(data);
+                setError(null);
             } catch (err) {
-                console.error(err);
-                setError(err.message);
+                console.error("Using fallback data for team:", err);
+                setTeamMembers(FALLBACK_TEAM_DATA);
+                setError(null); // Clear error since we have fallback
             } finally {
                 setLoading(false);
             }

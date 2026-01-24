@@ -9,6 +9,22 @@ export const Calendar = () => {
     const [error, setError] = useState(null);
     const INITIAL_VISIBLE_COUNT = 5;
 
+    const FALLBACK_CALENDAR_DATA = [
+        { month: 'JULY 2025', title: 'Project Nidhesh', desc: 'Career guidance sessions for school students on competitive exams and future opportunities.' },
+        { month: 'AUG 2025', title: 'Independence day Celebrations', desc: 'Conducting games and competitions for school students, along with distributing momentos, certificates to the winners.' },
+        { month: 'OCT 2025', title: 'Project Kitab', desc: 'Annual event providing textbooks, notebooks, stationery, and other educational essentials to school children.' },
+        { month: 'DEC 2025', title: 'Project Vakankur', desc: 'Building a greener tomorrow by engaging school students in tree plantation and environmental conservation activities.' },
+        { month: 'DEC 2025', title: 'Digital Bootcamp', desc: 'A hands-on computer learning session for school students.' },
+        { month: 'JAN 2026', title: 'Project Swayamika', desc: 'Empowerment sessions for female students covering menstrual health, personal safety (Good Touch-Bad Touch), and related topics.' },
+        { month: 'JAN 2026', title: '15th anniversary celebrations', desc: 'Selebrating the 15th anniversary of the FYFP.' },
+        { month: 'JAN 2026', title: 'Camps for Training on CPR', desc: 'Training students in CPR and first aid to prepare them for future emergencies.' },
+        { month: 'JAN 2026', title: 'Republic Day Celebrations', desc: 'Presenting certificates of appreciation to final year students who volunteered with FYFP for their valuable support towards the club and its initiatives.' },
+        { month: 'FEB 2026', title: 'Project Vikas', desc: 'Academic support for school students and awareness programs on various educational topics.' },
+        { month: 'FEB 2026', title: 'National Science Day Celebrations', desc: 'A event focused on creating awareness and collaborating with the schools to promote innovation among the students, along helping and displaying projects at schools.' },
+        { month: 'MAR 2026', title: 'Annual Day Stall', desc: 'Showcasing the achievements of the club at the annual day.' },
+        { month: 'MAR 2026', title: 'Next Academic year team elections', desc: 'Elections conducted to select the team for the next academic year.' },
+    ];
+
     useEffect(() => {
         const fetchEvents = async () => {
             try {
@@ -25,9 +41,11 @@ export const Calendar = () => {
                     desc: item.description
                 }));
                 setEvents(formattedData);
+                setError(null);
             } catch (err) {
-                console.error(err);
-                setError(err.message);
+                console.error("Using fallback data for calendar:", err);
+                setEvents(FALLBACK_CALENDAR_DATA);
+                setError(null); // Clear error since we have fallback
             } finally {
                 setLoading(false);
             }
