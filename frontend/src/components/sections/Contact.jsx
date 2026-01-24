@@ -24,11 +24,11 @@ export const Contact = () => {
                         <div className="social-links flex flex-col items-center">
                             <h4 className="font-bold uppercase tracking-widest text-[#9CA3AF] mb-8 text-sm">Follow Us</h4>
                             <div className="flex flex-wrap gap-4 justify-center">
-                                <a key='Instagram' href="https://www.instagram.com/fyfp_mvgr?igsh=MW02eTNzenlwaHp4cw==" className="social px-8 py-3 font-bold uppercase bg-[var(--c-text-main)] text-white rounded-full hover:bg-[var(--c-primary)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                                <a key='Instagram' href="https://www.instagram.com/fyfp_mvgr?igsh=MW02eTNzenlwaHp4cw==" className="social px-8 py-3 font-bold uppercase bg-[var(--c-text-main)] text-white rounded-full hover:bg-[var(--c-primary)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300" target="_blank" rel="noopener noreferrer">
                                     Instagram
                                 </a>
 
-                                <a key='LinkedIn' href="https://www.linkedin.com/company/fyfp/" className="social px-8 py-3 font-bold uppercase bg-[var(--c-text-main)] text-white rounded-full hover:bg-[var(--c-primary)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                                <a key='LinkedIn' href="https://www.linkedin.com/company/fyfp/" className="social px-8 py-3 font-bold uppercase bg-[var(--c-text-main)] text-white rounded-full hover:bg-[var(--c-primary)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300" target="_blank" rel="noopener noreferrer">
                                     LinkedIn
                                 </a>
                             </div>

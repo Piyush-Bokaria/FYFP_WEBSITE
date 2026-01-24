@@ -13,7 +13,8 @@ export const About = () => {
                             From The Youth For The People (FYFP) is a student-led service organization at MVGR College of Engineering (A). We are dedicated to making a tangible difference in our community through consistent, compassionate action.
                         </p>
                         <p className="text-[1.15rem] leading-relaxed pl-6 border-l-4 border-[var(--c-secondary)] font-medium text-[var(--c-text-main)] bg-white p-6 rounded-r-xl shadow-sm">
-                            It all started in the year 2011. The Gokul Chat Blast in Hyderabad deeply impacted students at our college and inspired us to contribute to society. This tragic incident also highlighted the importance of providing proper education to students, motivating us to take action.Then with the guidance of Dr. KSN Raju sir : 
+                            It all started in the year 2011. The Gokul Chat Blast in Hyderabad deeply impacted students at our college and inspired us to contribute to society. This tragic incident also highlighted the importance of providing proper education to students, motivating us to take action.Then with the guidance of
+                            <a href="https://mvgrce.edu.in/faculty-of-mvgr/?dept=&fid=180" target="_blank" rel="noopener noreferrer"><span className="font-bold">Dr. KVL Raju sir</span></a> :
                             <br />
                             <span className="font-bold">Ms. Anitha, Mr. Sharif, Ms.Srujana, Mr. Venkatesh</span>
                             <br />
