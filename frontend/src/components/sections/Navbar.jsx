@@ -30,7 +30,7 @@ export const Navbar = () => {
                     ))}
                     <li>
                         <a
-                            href="https://forms.gle/placeholder"
+                            href="https://forms.gle/2tEWkYt1a7idaA4i9"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="nav-link font-bold uppercase text-[0.9rem] px-4 py-2 rounded-full text-[var(--c-text-main)] transition-colors hover:text-[var(--c-primary)] hover:bg-[var(--c-primary)]/5"
@@ -40,7 +40,7 @@ export const Navbar = () => {
                     </li>
                     <li>
                         <a
-                            href="https://forms.gle/donate-placeholder"
+                            href="https://forms.gle/6FNcrDhkEhDWbJNp6"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="ml-4 nav-link donate-nav bg-[var(--c-primary)] text-white font-bold uppercase text-[0.9rem] px-6 py-3 rounded-full shadow-md hover:bg-[#238b7e] hover:shadow-lg hover:-translate-y-0.5 transition-all"
